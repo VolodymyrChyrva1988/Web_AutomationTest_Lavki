@@ -1,0 +1,55 @@
+TC_01,KBF,Valid Login
+Summary: Verify ability to logIn
+Precondition: Open url https://kbloomingflowers.com/account/login
+ Register a New User, username(Volodymyr), email(volodymyr.chyrva@yahoo.com), password(qwerty).
+Test steps:
+1. On Login page enter email: volodymyr.chyrva@yahoo.com in "Email" input field
+2. Enter password "qwerty" in "Password" input field
+3. Hit "Sign In" button
+Expected result :
+Successfully LogIn,Main Page was opened,"My Account" sign is visible,Log out button appear
+
+TC_2,KBF,InValid Login
+Summary: Verify inability to Login with invalid password
+Precondition: Open url https://kbloomingflowers.com/account/login,
+Test steps:
+1. On Login page enter email: volodymyr.chyrva@yahoo.com in "Email" input field
+2. Enter password "qwert" in "Password" input field
+3. Hit "Sign In" button
+Expected result :
+Message "Incorrect email or password." is appeared,Sign in button is displayed
+
+TC_3,KBF,Add product to cart
+Summary: Verify ability to add product to cart
+Precondition :Open url https://kbloomingflowers.com/account/login, Register a New User, username(Volodymyr), email(volodymyr.chyrva@yahoo.com), password(qwerty).
+Successfully LogIn
+Test Steps:
+1. On Main Page click on "SHOP" button
+2. On Product List Page click on "Adele"
+3. On Product Page Click Add to Cart
+Expected result :
+Chosen product placed in "Your Cart" and visible, quantity of product 1, Total amount is $129.00
+
+TC_4,KBF,Add product to cart and change quantity
+Summary: Verify ability to add product to cart
+Precondition :Open url https://kbloomingflowers.com/account/login, Register a New User, username(Volodymyr), email(volodymyr.chyrva@yahoo.com), password(qwerty).
+Successfully LogIn
+Test Steps:
+1. On Main Page click on "SHOP" button
+2. On Product List Page click on "Adele"
+3. On Product Page Click Add to Cart
+4. On Cart Page Click "Quantity" input field and change quantity to 3
+5. Click on "Update" button
+Expected result :
+Chosen product placed in "Your Cart" and visible, quantity of product 3, Total amount is $387.00
+
+TC_5,KBF,Use search to find product
+Summary: Verify Search function works
+Precondition :Open url https://kbloomingflowers.com/account/login, Register a New User, username(Volodymyr), email(volodymyr.chyrva@yahoo.com), password(qwerty).
+Successfully LogIn
+Test steps:
+1. On Main Page Click on "Search"
+2. On Search Page enter "Alexa" in "Search our site" input field
+3. Click Submit button
+Expected result :
+Search result is present and correct
