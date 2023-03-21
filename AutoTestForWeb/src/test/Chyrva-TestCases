@@ -1,4 +1,4 @@
-TC_01,KBF,Valid Login
+TC_01,LVK,Valid Login
 Summary: Verify ability to logIn
 Precondition: Open url https://kbloomingflowers.com/account/login
  Register a New User, username(Volodymyr), email(volodymyr.chyrva@yahoo.com), password(qwerty).
@@ -9,7 +9,7 @@ Test steps:
 Expected result :
 Successfully LogIn,Main Page was opened,"My Account" sign is visible,Log out button appear
 
-TC_2,KBF,InValid Login
+TC_2,LVK,InValid Login
 Summary: Verify inability to Login with invalid password
 Precondition: Open url https://kbloomingflowers.com/account/login,
 Test steps:
@@ -19,18 +19,18 @@ Test steps:
 Expected result :
 Message "Incorrect email or password." is appeared,Sign in button is displayed
 
-TC_3,KBF,Add product to cart
+TC_3,LVK,Add product to cart
 Summary: Verify ability to add product to cart
-Precondition :Open url https://kbloomingflowers.com/account/login, Register a New User, username(Volodymyr), email(volodymyr.chyrva@yahoo.com), password(qwerty).
+Precondition :Open url https:https://lavky.com/, Register a New User email(volodymyr.chyrva@yahoo.com), password(qwerty).
 Successfully LogIn
 Test Steps:
-1. On Main Page click on "SHOP" button
-2. On Product List Page click on "Adele"
+1. On Main Page click on "BAGS & PURSES" button
+2. On Product List Page click on "Black leather backpack - Sport"
 3. On Product Page Click Add to Cart
 Expected result :
-Chosen product placed in "Your Cart" and visible, quantity of product 1, Total amount is $129.00
+Chosen product placed in "Your Cart" and visible, quantity of product 1, Total amount is $90.00
 
-TC_4,KBF,Add product to cart and change quantity
+TC_4,LVK,Add product to cart and change quantity
 Summary: Verify ability to add product to cart
 Precondition :Open url https://kbloomingflowers.com/account/login, Register a New User, username(Volodymyr), email(volodymyr.chyrva@yahoo.com), password(qwerty).
 Successfully LogIn
@@ -43,7 +43,7 @@ Test Steps:
 Expected result :
 Chosen product placed in "Your Cart" and visible, quantity of product 3, Total amount is $387.00
 
-TC_5,KBF,Use search to find product
+TC_5,LVK,Use search to find product
 Summary: Verify Search function works
 Precondition :Open url https://kbloomingflowers.com/account/login, Register a New User, username(Volodymyr), email(volodymyr.chyrva@yahoo.com), password(qwerty).
 Successfully LogIn

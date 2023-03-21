@@ -2,11 +2,13 @@ package pages;
 
 import org.openqa.selenium.WebDriver;
 
-public class ParentPage {
+public class ParentPage extends CommonActWithElements{
 
-    WebDriver webDriver;
+
 
     public ParentPage(WebDriver webDriver) {
-        this.webDriver = webDriver;
+        super(webDriver);
+
+
     }
 }

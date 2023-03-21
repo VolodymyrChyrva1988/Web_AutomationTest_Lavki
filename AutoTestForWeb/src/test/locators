@@ -1,0 +1,38 @@
+#LoginPage
+
+loginPage.SignIn_button=.//*[@value = "Sign In"]
+loginPage.input.email=.//input[@id="CustomerEmail"]
+loginPage.input.password=.//input[@id="CustomerPassword"]
+loginPage.incorrectUsernameOrOPassMsg=.//span[@class="ty-login-form__wrong-credentials-text ty-error-text"]
+
+
+#HomePage
+
+
+homePage.BagsAndPurses.button=.//*[@class="ty-menu__item-link" and @href="https://lavky.com/bags-and-purses/"]
+homePage.input.search=.//*[@class="ty-search-magnifier"]
+
+
+#ProductListPage
+
+ProductListPage.DesiredItem=.//*[@src="https://lavky.com/images/thumbnails/276/276/detailed/655/536ef54dec228bab3d902d03e8879a08.jpg.jpg"]
+
+
+#ProductPage
+
+productPage.AddToCart.button=.//*[@id="button_cart_221058"]
+productPage.WriteAReview.button=.//div[@class="write-a-review"]
+productPage.AddQuantity.button=.//*[@class="cm-increase ty-value-changer__increase"]
+productPage.setQuantity.field=.//*[@id="qty_count_163766"]
+productPage.AddOverAvailableLimit.Msg=.//div[@class="cm-notification-content notification-content alert alert-warning"]
+productPage.MyCart=.//*[@class="csc_cart_icon"]
+productPage.ViewCart.button=.//*[ @class="ty-btn ty-btn__secondary"]
+
+
+#MyCartPage
+
+MyCartPage.TargetItem=.//*[ @id="det_img_3583612987"]
+MyCartPage.TotalPay=.//*[ @id="sec_cart_total"]
+MyCartPage.CheckValueQuantity=.//*[@id="qty_count_163766"]
+
+
