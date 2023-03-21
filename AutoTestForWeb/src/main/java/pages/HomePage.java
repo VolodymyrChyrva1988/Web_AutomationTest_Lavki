@@ -4,15 +4,16 @@ import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class HomePage extends ParentPage {
     LoginPage loginPage = new LoginPage(webDriver);
 
     @FindBy(xpath = ".//*[@class=\"ty-btn ty-btn__primary\"]")
     private WebElement signOutBtn;
-    @FindBy(xpath = ".//span[@class=\"csc_account_text ty-hand\"]")
+    @FindBy(xpath = ".//span[@class=\"csc_account_text ty-hand\"and text()=\"Login\"]")
     private WebElement loginInButton;
-    @FindBy(xpath = ".//*[@class=\"csc_account_icon\"]")
+    @FindBy(xpath = ".//span[@class=\"csc_account_text ty-hand\"and text()=\"Profile\"]")
     private WebElement profileButton;
     @FindBy(xpath = ".//*[@class=\"csc_advs_text\"]")
     private WebElement search;
@@ -30,8 +31,17 @@ public class HomePage extends ParentPage {
     private WebElement textItemOnPage;
 @FindBy(xpath = ".//*[@class=ty-dropdown-box__title cm-combination]")
 private WebElement cart;
+    @FindBy(xpath = ".//a[@href=\"https://lavky.com/cart/\"]")
+    private WebElement myCartIcon;
+
+
     public HomePage(WebDriver webDriver) {
         super(webDriver);
+    }
+
+    @Override
+    String getRelativeURL() {
+        return "/";
     }
 
     public HomePage checkIfRedirectedToHomePage() {
@@ -45,8 +55,7 @@ private WebElement cart;
 
     public HomePage openHomePage() {
         loginPage.openLoginPage();
-        clickOnElement(profileButton);
-            if(!isElementDisplayed(signOutBtn)) {
+            if(isElementDisplayed(loginInButton)) {
                 loginPage.clickOnLoginButton();
                 loginPage.clickOnSignInBtn();
                 loginPage.fillingLoginFormWithValidCred();
@@ -84,8 +93,11 @@ private WebElement cart;
     }
 
     public MyCartPage clickOnMyCartandViewBtn() {
-        clickOnElement(cart);
+        webDriverWait10.until(ExpectedConditions.visibilityOf(mainLogo));
+        clickOnElement(myCartIcon);
+        logger.info("My cart icon was clicked");
         clickOnElement(viewCartBtn);
+        logger.info("View cart button was clicked");
         return new MyCartPage(webDriver);
     }
 }

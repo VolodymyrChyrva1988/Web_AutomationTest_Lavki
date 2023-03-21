@@ -4,6 +4,7 @@ import baseTest.BaseTest;
 import org.junit.After;
 import org.junit.Test;
 import pages.MyCartPage;
+import pages.SearchResultPage;
 
 public class MyCartTest extends BaseTest {
 
@@ -20,9 +21,7 @@ public class MyCartTest extends BaseTest {
         .clickOnMyCartIconAndViewCart()
         .checkIsRedirectedToMyCartPage()
         .checkItemAndPriceAreCorrect();
-        searchResultPage.clickOnMyCartIconAndViewCart()
-                .clickOnDecreaseNumberOfItems()
-                .checkYouCartIsEmtyMsg()
+
 
 
         ;
@@ -32,8 +31,8 @@ public class MyCartTest extends BaseTest {
 
     @After
     public void deleteItemFromMyCart() {
-       homePage.openHomePage();
-        searchResultPage.clickOnMyCartIconAndViewCart()
+       homePage.openHomePage()
+               .clickOnMyCartandViewBtn()
                 .clickOnDecreaseNumberOfItems()
                 .checkYouCartIsEmtyMsg()
 

@@ -9,6 +9,12 @@ public class LoginPage extends ParentPage{
     public LoginPage(WebDriver webDriver) {
         super(webDriver);
     }
+
+    @Override
+    String getRelativeURL() {
+        return "/";
+    }
+
     @FindBy(xpath = ".//input[@class=\"ty-login__input cm-focus\"]")
     private WebElement inputEmail;
     @FindBy(xpath = ".//input[@class=\"ty-login__input\"]")

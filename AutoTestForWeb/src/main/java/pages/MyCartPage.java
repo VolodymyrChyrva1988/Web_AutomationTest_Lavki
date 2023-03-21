@@ -10,7 +10,12 @@ public class MyCartPage extends ParentPage{
         super(webDriver);
     }
 
-@FindBy(xpath = ".//*[@class=\"ty-mainbox-title\" ]")
+    @Override
+    String getRelativeURL() {
+        return "/cart/";
+    }
+
+    @FindBy(xpath = ".//*[@class=\"ty-mainbox-title\" ]")
 private WebElement cartContentText;
 @FindBy(xpath = ".//*[@class=\"ty-btn ty-btn__tertiary cm-external-click \" ]")
 private WebElement recalculateIcon;
@@ -30,6 +35,7 @@ private WebElement emptyCartMsg;
 
 
     public MyCartPage checkIsRedirectedToMyCartPage() {
+       // checkURL();
         Assert.assertTrue(isElementDisplayed(recalculateIcon));
         Assert.assertEquals("Text in element","Cart contents",cartContentText.getText());
         return this;

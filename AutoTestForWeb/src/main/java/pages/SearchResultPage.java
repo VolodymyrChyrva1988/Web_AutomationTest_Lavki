@@ -12,7 +12,13 @@ public class SearchResultPage extends ParentPage{
         super(webDriver);
     }
 
-@FindBy (xpath = ".//*[@id=\"button_cart_221058\"]")
+    @Override
+    String getRelativeURL() {
+        return "/";
+    }
+
+
+    @FindBy (xpath = ".//*[@id=\"button_cart_221058\"]")
 private WebElement addToCartBtn;
     @FindBy(xpath = ".//*[@class=\" csc_bg_img ty-pict     cm-image\"]")
     private WebElement targetItem;
